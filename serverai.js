@@ -1,4 +1,5 @@
 const https = require("https");
+const http = require("http");
 const fs = require('fs');
 //const express = require('express');
 
@@ -12,10 +13,12 @@ var opciones = {
     ca: fs.readFileSync('1243627926.ca-bundle')
 };
 
-https.createServer(opciones, (req, res) =>{
+https.createServer(opciones, function(req, res) {
     res.writeHead(200);
     res.end("server is runing at port 3000");
 }).listen(3000);
+
+console.log('server is runing at port 3000');
 
 /*https.createServer(opciones, app)
     .listen(3000, ()=>{
