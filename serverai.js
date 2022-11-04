@@ -8,9 +8,9 @@ const fs = require('fs');
 
 
 var opciones = {
-    key: fs.readFileSync('openeuralai.key'),
-    cert: fs.readFileSync('1243627926.crt'),
-    ca: fs.readFileSync('1243627926.ca-bundle')
+    key: fs.readFileSync('/cert/openeuralai.key'),
+    cert: fs.readFileSync('/cert/1243627926.crt'),
+    ca: fs.readFileSync('/cert/1243627926.ca-bundle')
 };
 
 https.createServer(opciones, function(req, res) {
