@@ -7,9 +7,9 @@ const app = express();
 
 
 var opciones = {
-    clave: fs.readFileSync('/cert/openeuralai.key'),
-    certificado: fs.readFileSync('/cert/1243627926.crt'),
-    ca: fs.readFileSync ('/cert/1243627926.ca-bundle')
+    key: fs.readFileSync('openeuralai.key'),
+    cert: fs.readFileSync('1243627926.crt'),
+    ca: fs.readFileSync ('1243627926.ca-bundle')
 };
 
 https.createServer(opciones, app)
