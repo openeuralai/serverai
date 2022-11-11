@@ -4,7 +4,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 const app = express();
-//const path = require('path');
+const path = require('path');
 const puerto = 3000;
 //app.set('views', path.join(__dirname, 'views'));
 
@@ -16,6 +16,10 @@ var credenciales = {
 
 const servidor = https.createServer(credenciales, app);
 servidor.listen(3000);
+
+//app.use(express.static(__dirname + '/public'));
+/*app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))*/
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
