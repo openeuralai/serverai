@@ -17,16 +17,14 @@ var credenciales = {
 const servidor = https.createServer(credenciales, app);
 servidor.listen(3000);
 
-//app.use(express.static(__dirname + '/public'));
-/*app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
-app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))*/
+app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
 app.get('/', (req, res) => {
     res.render('home', {
-        titulo: 'openeural.ai'
+        titulo: 'Inteligencia Artificial abierta para todos'
     })
 });
 
