@@ -24,7 +24,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 app.get('/', (req, res) => {
     res.render('home', {
-        titulo: 'Inteligencia Artificial abierta para todos'
+        titulo: 'IA libre para el mundo'
     })
 });
 
