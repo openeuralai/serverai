@@ -2,10 +2,11 @@ const https = require("https");
 const fs = require('fs');
 const express = require('express');
 const hbs = require('hbs');
+require('dotenv').config;
 
 const app = express();
 const path = require('path');
-const puerto = 3000;
+const puerto = process.env.PORT;
 //app.set('views', path.join(__dirname, 'views'));
 
 var credenciales = {
