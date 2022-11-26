@@ -29,6 +29,12 @@ app.get('/', (req, res) => {
     })
 });
 
+app.get('/numeros', (req, res) => {
+    res.render('numeros', {
+        titulo: 'Números escritos a mano'
+    })
+});
+
 console.log(`Example app listening on port 3000`);
 
 /*app.get('*', (req, res) => {

@@ -1,29 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>{{titulo}}</title>
-</head>
+{{> header}}
+<style>
+    .bgprincipal {
+        background-color: #20002a;
+    }
+</style>
 
 <body>
-    {{> header}}
-
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-        <div class="row">
+    <div class="container-fluid mb-4">
+        <div class="row bgprincipal">
             <div class="col-md-3"></div>
             <div class="col-md-6 text-center">
                 <img class="img-fluid" src="img/openeuralai.png" alt="">
             </div>
         </div>
-        <div class="row">
+        <div class="row bgprincipal">
             <div class="col text-center">
                 <p class="h1 text-white display-1 fw-bolder">{{titulo}}</p>
+            </div>
+        </div>
+        <div class="b-example-divider"></div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+			<div class="col-md-2">
+				<div class="card-columns">
+                    <div class="card">
+                        <a href="/numeros"><img src="img/miniatura_numero_escrito.png" class="card-img-top img-fluid" alt="" width="50"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">N&uacute;meros escritos a mano</h4>
+                            <p class="card-text">Predicción de números escritos a mano</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
